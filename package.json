@@ -5,10 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
-    "build": "babel src --out-dir dist",
-    "watch:babel": "babel src --out-dir dist --watch",
+    "build": "babel src --out-dir dist && cp src/components/DayPicker/day-picker.css dist/components/DayPicker/day-picker.css",
+    "watch:babel": "babel src --out-dir dist --watch && cp src/components/DayPicker/day-picker.css dist/components/DayPicker/day-picker.css",
     "watch:webpack": "webpack --watch",
-    "watch": "npm-run-all --parallel watch:babel watch:webpack"
+    "watch": "npm run build && npm-run-all --parallel watch:babel watch:webpack"
   },
   "repository": {
     "type": "git",
