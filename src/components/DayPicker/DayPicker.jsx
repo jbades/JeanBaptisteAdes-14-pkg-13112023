@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Pikaday from 'pikaday'
-import '../../../node_modules/pikaday/css/pikaday.css'
+import './day-picker.css'
 
 export default function DayPicker( {value, onChange} ) {
 
