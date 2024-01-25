@@ -1,3 +1,3 @@
-import DatePicker from "./components/DatePicker/DatePicker";
+import DayPicker from "./components/DayPicker/DayPicker";
 
-export default DatePicker
+export default DayPicker
