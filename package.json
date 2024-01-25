@@ -1,6 +1,6 @@
 {
   "name": "pikaday4react-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "adjusting pick-a-date js library to a react package",
   "main": "dist/index.js",
   "scripts": {
