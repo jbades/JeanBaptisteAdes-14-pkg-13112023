@@ -14,13 +14,14 @@ function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; 
 function DayPicker(_ref) {
   var value = _ref.value,
     onChange = _ref.onChange;
-  console.log("!!! value: ", value, "!!! onChange: ", onChange);
   var ref = (0, _react.useRef)(null);
-  console.log("!!! ref: ", ref);
   (0, _react.useEffect)(function () {
     var picker = new _pikaday["default"]({
       field: ref.current,
-      onSelect: onChange
+      onSelect: function onSelect() {
+        var selectedDate = picker.toString('YYYY-MM-DD');
+        onChange(selectedDate);
+      }
     });
     return function () {
       return picker.destroy();
@@ -28,10 +29,12 @@ function DayPicker(_ref) {
   }, [onChange]);
   return /*#__PURE__*/_react["default"].createElement("input", {
     type: "text",
+    "class": "form-control",
     ref: ref,
-    value: value || '',
-    onChange: onChange,
+    value: value || ''
+    // onChange={onChange} 
+    ,
+    placeholder: "Choose a date",
     readOnly: true
   });
-  // return <input type="text" name="date-field" />
 }
