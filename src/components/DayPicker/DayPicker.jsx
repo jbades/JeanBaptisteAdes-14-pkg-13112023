@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import Pikaday from 'pikaday'
 import './day-picker.css'
 
-export default function DayPicker( {value, onChange} ) {
+export default function DayPicker( {type, id, value, onChange, className} ) {
 
   const ref = useRef(null)
 
@@ -21,12 +21,14 @@ export default function DayPicker( {value, onChange} ) {
   }, [onChange])
 
   return <input 
-    type="text" 
-    class="form-control" 
+    type={type}
+    id={id} 
+    class={className} 
     ref={ref} 
     value={value || ''} 
     // onChange={onChange} 
     placeholder='Choose a date' 
+    required
     readOnly
   />
 }
