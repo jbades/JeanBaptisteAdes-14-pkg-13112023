@@ -33,7 +33,7 @@ function DayPicker(_ref) {
   return /*#__PURE__*/_react["default"].createElement("input", {
     type: type,
     id: id,
-    "class": className,
+    className: className,
     ref: ref,
     value: value || ''
     // onChange={onChange} 

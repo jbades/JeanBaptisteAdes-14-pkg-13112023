@@ -10,7 +10,7 @@ export default function DayPicker( {type, id, value, onChange, className} ) {
 
     const picker = new Pikaday({
       field: ref.current,
-      onSelect: function() {
+      onSelect: () => {
         const selectedDate = picker.toString('YYYY-MM-DD')
         onChange(selectedDate)
       }
@@ -23,7 +23,7 @@ export default function DayPicker( {type, id, value, onChange, className} ) {
   return <input 
     type={type}
     id={id} 
-    class={className} 
+    className={className} 
     ref={ref} 
     value={value || ''} 
     // onChange={onChange} 
